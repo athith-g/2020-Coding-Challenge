@@ -6,7 +6,7 @@ app = Flask(__name__)
 scoreboard = [
     {
     "id": 1,
-    "name": "Boston Bruins", 
+    "name": "Boston Bruins",
     "score": 7
     },
 
@@ -48,7 +48,7 @@ def increase_score():
 
     json_data = request.get_json()   
     team_id = json_data["id"]  
-   
+    
     for team in scoreboard:
         if team["id"] == team_id:
             team["score"] += 1
